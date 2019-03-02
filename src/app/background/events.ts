@@ -6,9 +6,11 @@ import { ListenerBag } from '@exteranto/core'
 
 import { Exception } from '@exteranto/exceptions'
 import { AppBootedEvent, Event } from '@exteranto/core'
+import { SavePageMenuItemClickedEvent } from './events/SavePageMenuItemClickedEvent'
 
 import {
-  ExtensionUpdatedEvent
+  ExtensionUpdatedEvent,
+  ExtensionInstalledEvent,
 } from '@exteranto/api'
 
 /**
@@ -21,16 +23,22 @@ import { Handler } from '@/exceptions/Handler'
 import {
   ClearsLocalStorage,
   BootsMessageListener,
+  CustomizesContextMenus,
 } from './listeners'
 
 export default (touch: (event: any) => ListenerBag) => {
 
   touch(AppBootedEvent)
     .addListener(new BootsMessageListener)
+    .addListener(new CustomizesContextMenus)
+
+  touch(SavePageMenuItemClickedEvent)
 
   /**
    * Extension lifecycle events.
    */
+
+  touch(ExtensionInstalledEvent)
 
   touch(ExtensionUpdatedEvent)
     .addListener(new ClearsLocalStorage)

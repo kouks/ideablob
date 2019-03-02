@@ -35,7 +35,6 @@ export class Log {
 
   /**
    * Logging helper.
-   * TODO: This can probably be improved.
    *
    * @param level The level to use
    * @param args The arguments to be logged
@@ -51,7 +50,6 @@ export class Log {
 /**
  * Env parser.
  */
-
 export const env: any = (key: string, fallback?: string | number | boolean) => {
   const value: string = $env[key]
 
@@ -60,7 +58,7 @@ export const env: any = (key: string, fallback?: string | number | boolean) => {
   }
 
   if (/^\d+$/.test(value)) {
-    return parseInt(value, 10)
+    return Number(value)
   }
 
   switch (value.toLowerCase()) {

@@ -22,7 +22,6 @@ export default (touch: (event: any) => ListenerBag) => {
     .addListener(new BootsBaseVueInstance)
     .addListener(new BootsMessageListener)
 
-
   /**
    * Exception handler.
    */
@@ -34,5 +33,5 @@ export default (touch: (event: any) => ListenerBag) => {
    */
 
   touch(Event)
-    .addListener(new Debug('Frame'))
+    .addListener(new Debug('Feed'))
 }
