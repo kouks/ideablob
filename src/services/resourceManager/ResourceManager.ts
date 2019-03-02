@@ -20,7 +20,7 @@ export class ResourceManager<T> {
   /**
    * List the resource.
    *
-   * @return An array of the resource instances.
+   * @return An array of the resource instances
    */
   public async list () : Promise<T[]> {
     return this.awi.base()
