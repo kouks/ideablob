@@ -6,6 +6,10 @@ import {
   BrowserActionProvider,
 } from '@exteranto/api'
 
+import {
+  ContextMenusProvider
+} from '@/services/contextMenus'
+
 import { env } from '@/helpers'
 
 export default {
@@ -32,7 +36,7 @@ export default {
      * All application service providers are specified here.
      */
 
-    //
+    ContextMenusProvider,
 
   ],
 
@@ -52,6 +56,10 @@ export default {
       driver: env('CACHE_DRIVER'),
       forfeit: false,
       timeout: 600,
+    },
+
+    contextMenuIds: {
+      savePage: 'save-page-to-ideablob'
     },
 
   },
