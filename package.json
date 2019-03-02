@@ -1,0 +1,50 @@
+{
+  "name": "ideablob",
+  "version": "0.0.1",
+  "description": "...",
+  "scripts": {
+    "test": "mocha test/setup.ts test/**/*.spec.ts -r ts-node/register",
+    "build": "ext build",
+    "build:dev": "ext build -e dev",
+    "build:prod": "ext build -e prod",
+    "watch": "ext watch -e dev",
+    "lint": "tslint -p tsconfig.json -c tslint.json"
+  },
+  "author": "...",
+  "repository": "github:kouks/ideablob",
+  "license": "MIT",
+  "dependencies": {
+    "@exteranto/api": "^2.5.0",
+    "@exteranto/cli": "^2.0.0",
+    "@exteranto/core": "^2.5.0",
+    "@exteranto/exceptions": "^2.5.0",
+    "@exteranto/utils": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/chai-as-promised": "^7.1.0",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^10.12.27",
+    "@types/sinon": "^5.0.1",
+    "bulma": "^0.7.4",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^5.2.0",
+    "pre-push": "^0.1.1",
+    "sinon": "^6.1.4",
+    "sinon-chrome": "^2.3.2",
+    "ts-node": "^7.0.0",
+    "tsconfig-paths": "^3.8.0",
+    "tslint": "^5.13.0",
+    "typescript": "^2.9.2",
+    "vue": "^2.6.7",
+    "vue-class-component": "^6.3.2",
+    "vue-property-decorator": "^7.3.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.1.0",
+    "vuex-class": "^0.3.1"
+  },
+  "pre-push": [
+    "lint"
+  ]
+}

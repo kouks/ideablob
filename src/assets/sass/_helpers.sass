@@ -1,0 +1,10 @@
+
+@each $name, $color in $brand-colors
+  .has-background-#{$name}
+    background: $color
+
+  .has-text-#{$name}
+    color: $color
+
+.has-cursor-pointer
+  cursor: pointer
