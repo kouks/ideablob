@@ -7,7 +7,7 @@ import {
 } from '@exteranto/api'
 
 import {
-  ContextMenusProvider
+  ContextMenusProvider,
 } from '@/services/contextMenus'
 
 import { env } from '@/helpers'
@@ -59,7 +59,7 @@ export default {
     },
 
     contextMenuIds: {
-      savePage: 'save-page-to-ideablob'
+      savePage: 'save-page-to-ideablob',
     },
 
   },

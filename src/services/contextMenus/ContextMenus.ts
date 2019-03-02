@@ -29,7 +29,7 @@ export class ContextMenus {
         // visible: configuration.visible, TODO: Chrome types are not updated.
         enabled: configuration.enabled,
         parentId: configuration.parentId,
-        onclick: (item, tab) => this.fireClickedEvent(configuration.event, item, tab)
+        onclick: (item, tab) => this.fireClickedEvent(configuration.event, item, tab),
       }, () => chrome.runtime.lastError
         ? reject(new ContextMenuItemCreatinonFailedException())
         : resolve()
@@ -48,7 +48,7 @@ export class ContextMenus {
     // Build up the info object.
     const info: ContextMenuItemClickedEventInfo = {
       ...item,
-      tabId: tab.id
+      tabId: tab.id,
     }
 
     // Find the event to be fired.
