@@ -22,7 +22,7 @@ export class CustomizesContextMenus implements Listener {
    * Handle the fired event.
    */
   public handle () : void {
-    // Create a context menu to save an item to Ideablob.
+    // Create a context menu item to save a page to Ideablob.
     this.contextMenus.addItem({
       ...this.menus.savePage,
       event: SavePageMenuItemClickedEvent,
