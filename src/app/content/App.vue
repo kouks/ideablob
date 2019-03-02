@@ -1,7 +1,5 @@
 <template>
-  <div id="ideablob">
-    Hello
-  </div>
+  <div id="ideablob"></div>
 </template>
 
 <script lang="ts">
