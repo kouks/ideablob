@@ -18,7 +18,8 @@
     "@exteranto/cli": "^2.0.0",
     "@exteranto/core": "^2.5.0",
     "@exteranto/exceptions": "^2.5.0",
-    "@exteranto/utils": "^2.5.0"
+    "@exteranto/utils": "^2.5.0",
+    "awi": "^0.0.5"
   },
   "devDependencies": {
     "@types/chai": "^4.1.4",
