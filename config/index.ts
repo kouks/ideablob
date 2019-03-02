@@ -58,8 +58,8 @@ export default {
       timeout: 600,
     },
 
-    contextMenuIds: {
-      savePage: 'save-page-to-ideablob',
+    contextMenus: {
+      savePage: { id: 'save-page-to-ideablob', title: 'Save page to Ideablob' },
     },
 
   },
