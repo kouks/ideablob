@@ -6,10 +6,9 @@ import {
   BrowserActionProvider,
 } from '@exteranto/api'
 
-import {
-  ContextMenusProvider,
-} from '@/services/contextMenus'
+import { ContextMenusProvider } from '@/services/contextMenus'
 
+import { Awi } from 'awi'
 import { env } from '@/helpers'
 
 export default {
@@ -62,5 +61,13 @@ export default {
       savePage: { id: 'save-page-to-ideablob', title: 'Save page to Ideablob' },
     },
 
+    awi: {
+      base: () => new Awi()
+        // This would be so nice.
+        // .use(async req => req.executor = Container.resolveOptional<Executor>(AbstractExecutor))
+        .use(async req => req.base = 'apigw/prod/v1'),
+    },
+
   },
+
 }

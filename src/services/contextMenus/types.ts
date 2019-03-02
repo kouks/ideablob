@@ -1,3 +1,4 @@
+import { Class } from '@/types'
 import { ItemType } from './ItemType'
 import { ContextType } from './ContextType'
 import { ContextMenuItemClickedEvent } from './events'

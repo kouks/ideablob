@@ -11,20 +11,5 @@ import * as browser from 'sinon-chrome/extensions'
 
 import * as chai from "chai"
 import * as chaiAsPromised from "chai-as-promised"
+
 chai.use(chaiAsPromised)
-
-require('jsdom-global')()
-require('vue').config.productionTip = false
-
-/**
- * Bootstraping exteranto.
- */
-
-import { App, Script } from '@exteranto/core'
-import config from '../config'
-import events from '../src/app/background/events'
-
-const app: App = new App(Script.BACKGROUND, config, events)
-
-app.start()
-app.boot()
