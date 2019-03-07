@@ -1,5 +1,5 @@
 
-export class Model<T> {
+export class Resource<T> {
 
   constructor (protected data: T) {
     //

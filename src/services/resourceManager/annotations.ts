@@ -3,18 +3,18 @@ import { ResourceManager } from './ResourceManager'
 
 /**
  * The @Manager annotation that resolves the resource manager for the provided
- * model class.
+ * resource class.
  *
- * @param model The model to create the manager for.
+ * @param resource The resource to create the manager for.
  */
-export function Manager<T> (model: Class<T>) : (target: any, property: string) => void {
+export function Manager<T> (resource: Class<T>) : (target: any, property: string) => void {
   return (target: any, property: string) : void => {
-    const key: string = `__manager_${model.name}`
+    const key: string = `__manager_${resource.name}`
 
     Object.defineProperty(target, property, {
       get () : ResourceManager<T> {
         return target[key] === undefined
-          ? target[key] = ResourceManager.for<T>(model)
+          ? target[key] = ResourceManager.for<T>(resource)
           : target[key]
       },
 

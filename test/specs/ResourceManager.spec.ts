@@ -2,7 +2,7 @@ import { expect } from 'chai'
 
 // TODO: Export
 import { Awi } from 'awi'
-import { Model } from '../../src/services/resourceManager/models/Model'
+import { Resource } from '../../src/services/resourceManager/Resource'
 import { Manager } from '../../src/services/resourceManager/annotations'
 import { ResourceManager } from '../../src/services/resourceManager/ResourceManager'
 
@@ -39,7 +39,7 @@ interface Todo {
   completed: boolean,
 }
 
-class Todos extends Model<Todo> implements Todo {
+class Todos extends Resource<Todo> implements Todo {
 
   get title () : string {
     return this.data.title
