@@ -21,6 +21,7 @@ import { Debug } from '@/helpers'
 import { Handler } from '@/exceptions/Handler'
 
 import {
+  SharesPage,
   ClearsLocalStorage,
   BootsMessageListener,
   CustomizesContextMenus,
@@ -33,6 +34,7 @@ export default (touch: (event: any) => ListenerBag) => {
     .addListener(new CustomizesContextMenus)
 
   touch(SavePageMenuItemClickedEvent)
+    .addListener(new SharesPage)
 
   /**
    * Extension lifecycle events.

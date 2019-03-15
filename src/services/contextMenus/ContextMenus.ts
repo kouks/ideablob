@@ -1,3 +1,4 @@
+import { Class } from '@/types'
 import { ContextMenuItemClickedEvent } from './events'
 import { Autowired, Dispatcher } from '@exteranto/core'
 import { ContextMenuItemCreatinonFailedException } from './exceptions'
